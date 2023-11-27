@@ -64,3 +64,8 @@ function nextSlide() {
     currentIndex = (currentIndex + 1) % carouselData.length;
     showSlide(currentIndex);
 }
+
+function backSlide() {
+    currentIndex = (currentIndex - 1) % carouselData.length;
+    showSlide(currentIndex);
+}
