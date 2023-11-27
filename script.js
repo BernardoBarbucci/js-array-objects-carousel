@@ -22,15 +22,15 @@
 // step .1 creo un array dove metto gli objects, ossia img + h1 + p
 const images = [
     {
-        image: 'img/01.webp',
+        image: './img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morales',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     }, {
-        image: 'img/02.webp',
+        image: './img/02.webp',
         title: 'Ratchet & Clank: Rift Apart',
         text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
     }, {
-        image: 'img/03.webp',
+        image: './img/03.webp',
         title: 'Fortnite',
         text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
     }, {
@@ -51,7 +51,7 @@ let currentIndex = 0;
 showImg(currentIndex);
 
 function showSlide(index) {
-     const slide = carouselData[index];
+     const slide = images[index];
      imgEl.src = slide.imgSrc;
      textEL.innerhtml = `
         <h1>${slide.title}</h1>
@@ -61,11 +61,11 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % carouselData.length;
+    currentIndex = (currentIndex + 1) % images.length;
     showSlide(currentIndex);
 }
 
-function backSlide() {
-    currentIndex = (currentIndex - 1) % carouselData.length;
+function prevSlide() {
+    currentIndex = (currentIndex - 1) % images.length;
     showSlide(currentIndex);
 }
