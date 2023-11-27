@@ -60,8 +60,7 @@ function showSlide(index) {
      `;
 }
 
-
-
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % 
+    currentIndex = (currentIndex + 1) % carouselData.length;
+    showSlide(currentIndex);
 }
