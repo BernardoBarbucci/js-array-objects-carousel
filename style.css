@@ -18,6 +18,8 @@
     border: 2px solid white;
     margin: auto;
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .title{
     color: white;
@@ -25,4 +27,20 @@
     display: flex;
     justify-content: center;
     margin: 1.5rem 0;
+}
+.current-img{
+    height: 100%;
+    width: 75%;
+    border: 2px solid red;
+    border-radius: 10px;    
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.scroll-img{
+    height: 100%;
+    width: 25%;
+    border: 2px solid purple;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
