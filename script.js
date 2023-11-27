@@ -63,8 +63,6 @@ function showSlide(index) {
     imgEl.style.height = 'auto';
 }
 
-
-
 document.getElementById('prev-img').addEventListener('click', prevSlide);
 document.getElementById('next-img').addEventListener('click', nextSlide);
 
