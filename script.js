@@ -57,7 +57,13 @@ function showSlide(index) {
         <h1>${slide.title}</h1>
         <p>${slide.description}</p>
      `;
+    imgEl.style.maxWidth = '100%';
+    imgEl.style.maxHeight = '100%';
+    imgEl.style.width = 'auto';
+    imgEl.style.height = 'auto';
 }
+
+
 
 document.getElementById('prev-img').addEventListener('click', prevSlide);
 document.getElementById('next-img').addEventListener('click', nextSlide);
