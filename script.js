@@ -45,15 +45,15 @@ const images = [
 ];
 
 const imgEl = document.getElementById('current-img');
-const textEL = document.getElementsById('carousel-info');
+const textEL = document.getElementById('carousel-info');
 
 let currentIndex = 0;
-showImg(currentIndex);
+showSlide(currentIndex);
 
 function showSlide(index) {
      const slide = images[index];
-     imgEl.src = slide.imgSrc;
-     textEL.innerhtml = `
+     imgEl.src = slide.image; // Fix property name
+     textEL.innerHTML = `
         <h1>${slide.title}</h1>
         <p>${slide.description}</p>
      `;
@@ -68,6 +68,6 @@ function nextSlide() {
 }
 
 function prevSlide() {
-    currentIndex = (currentIndex - 1) % images.length;
+    currentIndex = (currentIndex - 1 + images.length) % images.length; 
     showSlide(currentIndex);
 }
