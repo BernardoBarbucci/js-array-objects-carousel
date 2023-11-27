@@ -47,3 +47,21 @@ const images = [
 const imgEl = document.getElementById('current-img');
 const textEL = document.getElementsById('carousel-info');
 
+let currentIndex = 0;
+showImg(currentIndex);
+
+function showSlide(index) {
+     const slide = carouselData[index];
+     imgEl.src = slide.imgSrc;
+     textEL.innerhtml = `
+        <h1>${slide.title}</h1>
+        <h2>${slide.subtitle}</h2>
+        <p>${slide.description}</p>
+     `;
+}
+
+
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 
+}
