@@ -16,12 +16,21 @@
             <div class="title">
                 <h1>Objects Carousel</h1>
             </div>
-            <div class="carousel-container">
-                <div class="current-img">
+            <div class="carousel-container" id="carousel-container">
+                <div class="carousel-container" id="carousel-container">
+                <div class="current-img" id="current-img-container">
+                    <!-- Immagine del carosello -->
+                    <img id="current-img" src="" alt="Carousel Image">
+                    <!-- Informazioni sul carosello -->
+                    <div class="carousel-info" id="carousel-info">
+                        <h2 id="image-title"></h2>
+                        <p id="image-text"></p>
+                    </div>
                 </div>
                 <div class="scroll-img">
-                    <button class="next-img"></button>
-                    <button class="previous-img"></button>
+                    <!-- Pulsanti di navigazione -->
+                    <button id="prev-img" onclick="prevImage()">Previous</button>
+                    <button id="next-img" onclick="nextImage()">Next</button>
                 </div>
             </div>
         </section>
